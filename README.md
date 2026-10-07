@@ -113,6 +113,7 @@ Frontend
 Express.js / Node.js Backend
    ↓
 MongoDB Database
+---
 
 ## Author
 
