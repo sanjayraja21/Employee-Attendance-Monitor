@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Employee Attendance Monitor</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Employee Attendance Monitor</h1>
+
+        <p>
+            Manage employees and daily attendance
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard">
+
+            <div class="card">
+
+                <h3>Total Employees</h3>
+
+                <p id="totalEmployees">0</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Present Today</h3>
+
+                <p id="presentToday">0</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Absent Today</h3>
+
+                <p id="absentToday">0</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Late Today</h3>
+
+                <p id="lateToday">0</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- EMPLOYEE FORM -->
+
+        <section class="box">
+
+            <h2>Add Employee</h2>
+
+            <form id="employeeForm">
+
+                <input
+                    type="text"
+                    id="employeeId"
+                    placeholder="Employee ID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="employeeName"
+                    placeholder="Employee Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="employeeEmail"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="department"
+                    placeholder="Department"
+                    required
+                >
+
+                <button type="submit">
+                    Add Employee
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ATTENDANCE FORM -->
+
+        <section class="box">
+
+            <h2>Mark Attendance</h2>
+
+            <form id="attendanceForm">
+
+                <input
+                    type="text"
+                    id="attendanceEmployeeId"
+                    placeholder="Employee ID"
+                    required
+                >
+
+                <input
+                    type="date"
+                    id="attendanceDate"
+                    required
+                >
+
+                <input
+                    type="time"
+                    id="checkIn"
+                >
+
+                <input
+                    type="time"
+                    id="checkOut"
+                >
+
+                <select
+                    id="status"
+                    required
+                >
+
+                    <option value="">
+                        Select Status
+                    </option>
+
+                    <option value="Present">
+                        Present
+                    </option>
+
+                    <option value="Absent">
+                        Absent
+                    </option>
+
+                    <option value="Late">
+                        Late
+                    </option>
+
+                </select>
+
+                <button type="submit">
+                    Mark Attendance
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- EMPLOYEE TABLE -->
+
+        <section class="box">
+
+            <h2>Employees</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Name</th>
+
+                            <th>Email</th>
+
+                            <th>Department</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="employeeTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ATTENDANCE TABLE -->
+
+        <section class="box">
+
+            <h2>Attendance</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee ID</th>
+
+                            <th>Date</th>
+
+                            <th>Check In</th>
+
+                            <th>Check Out</th>
+
+                            <th>Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="attendanceTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
